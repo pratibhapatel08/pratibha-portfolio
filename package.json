@@ -1,0 +1,13 @@
+{
+  "name": "pratibha-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:api": "npm run dev --prefix server",
+    "dev:web": "npm run dev --prefix client",
+    "mongo": "docker compose up -d"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
