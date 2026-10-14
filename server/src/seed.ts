@@ -163,15 +163,10 @@ const education = [
   },
 ];
 
-export async function seedIfEmpty() {
-  const existing = await Profile.countDocuments();
-  if (existing > 0) return;
-
-  await Promise.all([
-    Profile.create(profile),
-    Experience.insertMany(experience),
-    Skill.insertMany(skills),
-    Project.insertMany(projects),
-    Education.insertMany(education),
-  ]);
-}
+export const portfolioData = {
+  profile,
+  experience,
+  skills,
+  projects,
+  education,
+};
