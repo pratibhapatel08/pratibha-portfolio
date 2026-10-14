@@ -1,6 +1,6 @@
 import type { ContactPayload, PortfolioData } from "./types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://pratibha-portfolio.onrender.com";
 
 export async function fetchPortfolio(): Promise<PortfolioData> {
   const response = await fetch(`${API_URL}/api/portfolio`, { cache: "no-store" });
