@@ -79,7 +79,7 @@ export function Portfolio() {
       {status === "error" ? (
         <div className="loader">
           <span>PP</span>
-          <p>The API is not reachable. Start MongoDB, then the Express server on port 5000.</p>
+          <p>Unable to load portfolio. Please check your internet connection and try again.</p>
           <button className="btn btn-primary" type="button" onClick={() => setAttempt((value) => value + 1)}>
             Try again
           </button>
